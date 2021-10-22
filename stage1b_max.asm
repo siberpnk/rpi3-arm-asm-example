@@ -1,5 +1,5 @@
 ; function stage1b_max
-; returns the minimum value out of three arguments passed in
+; returns the maximum value out of three arguments passed in
 ; Arguments:
 ; r0 - first value
 ; r1 - second value
@@ -8,8 +8,8 @@
 
 stage1b_max:
         cmp r0, r1
-	bgt .if_gt
 	blt .if_lt
+	bgt .if_gt
 	beq .if_eq
 
 .if_lt:

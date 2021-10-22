@@ -8,18 +8,18 @@
 
 stage1a_min:
 	cmp r0, r1
-	blt .if_lt
-	bgt .if_gt_OR_eq
-	beq .if_gt_OR_eq
+	bgt .if_gt
+	blt .if_lt_OR_eq
+	beq .if_lt_OR_eq
 
-.if_lt:
+.if_gt:
 	mov r0, r1
 	mov r1, r2
 	cmp r0, r1
 	ble .return
 	b stage1a_min
 
-.if_gt_OR_eq:
+.if_lt_OR_eq:
 	cmp r0, r2
 	ble stage1a_min	
 

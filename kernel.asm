@@ -8,7 +8,7 @@
 ; out the other (Pi 4 by default)
 
 ;BASE=$FE000000 ; RPI 4 Peripherals address ;
-BASE=$3F000000 ;for RP2 and RP3 Peripherals address
+BASE=$3F000000 	;for RP2 and RP3 Peripherals address
 
 mov sp,$1000  ;make room on the stack
 
