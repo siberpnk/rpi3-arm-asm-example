@@ -18,7 +18,7 @@ INIT:
         mov r7, 3   ; arg 3 for Stage 1
 
 
-        ; initialises arrays for Stages 3, 4 and 5
+        ; initialises arrays for Stages 2, 3, 4 and 5
         ; you can change the values in the arrays, but not the array names
 
         ; numarray1 for Stage 2 and 3
