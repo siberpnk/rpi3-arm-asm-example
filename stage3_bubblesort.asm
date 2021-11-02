@@ -16,7 +16,6 @@ stage3_bubblesort:
 	mov r0, r2 ; BASE address
 	mov r1, r3 ; array size
 	push {r1}
-	sub r1, r1, #1
 	mov r2, r4 ; array
 	mov r3, 0  ; iterator
 	mov r6, 0  ; 
@@ -25,6 +24,7 @@ stage3_bubblesort:
 .sort:
 	cmp r6, r1
 	bge .rst_itr
+
 	cmp r1, #1 ; check full pass
 	ble .print
 
@@ -49,6 +49,7 @@ stage3_bubblesort:
 .rst_itr:
 	sub r1, #1
 	mov r6, 0
+	mov r3, 0
 	b .sort
 
 .print:

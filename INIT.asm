@@ -13,8 +13,8 @@
 INIT:
         ; initialises input values for Stages 1A, 1B and 1C
         ; you can change the values but not the registers
-        mov r5, 5   ; arg 1 for Stage 1
-        mov r6, 4   ; arg 2 for Stage 1
+        mov r5, 3   ; arg 1 for Stage 1
+        mov r6, 3   ; arg 2 for Stage 1
         mov r7, 3   ; arg 3 for Stage 1
 
 
@@ -25,7 +25,7 @@ INIT:
         ; numarray holds 32 bit (dw) values
         align 2    ; this should not need changing
         numarray1:
-                dw  5, 1, 4, 2, 3, 3, 4, 1     ; you can change the values here
+                dw  5, 2, 4, 2, 3, 3, 4, 1     ; you can change the values here
 
 
         ; numarray2  for Stage 4
