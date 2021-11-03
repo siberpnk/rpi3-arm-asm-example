@@ -21,31 +21,36 @@ stage3_bubblesort:
 	mov r7, 4  ; mul opperand/index width
 
 .sort:
+	;check for a single pass 
 	cmp r6, r1
 	bge .rst_itr
 
-	cmp r1, #1 ; check full pass
+	;check for a full pass
+	cmp r1, #1
 	ble .print
 
 	ldr r4, [r2, r3] ; current index
-	add r6, 1
-	mul r3, r6, r7   ; iterate index
+	add r6, 1	 ; iterator increments
+	mul r3, r6, r7   ; calculates current index using iterator and index width
 	ldr r5, [r2, r3] ; current index
-	cmp r4, r5
+	cmp r4, r5	 ; compares index n to n+1 to determine if a swap is needed
 	bgt .swap
 	ble .sort
 
 .swap:
+	; decrements the iterator and recalculates index -1
 	sub r6, 1
 	mul r3, r6, r7
-	str r5, [r2, r3]
+	str r5, [r2, r3] ; stores second value in n-1
+	; increments the iterator and recalculates index +1
 	add r6, 1
 	mul r3, r6, r7
-	str r4, [r2, r3]
+	str r4, [r2, r3] ; stores first value in n+1
 	;bx lr ; break point
 	b .sort
 
 .rst_itr:
+	; iterator and index are reset and maximum movements are reduced by 1
 	sub r1, #1
 	mov r6, 0
 	mov r3, 0
