@@ -17,7 +17,7 @@ stage3_bubblesort:
 	push {r1}
 	mov r2, r4 ; array
 	mov r3, 0  ; iterator
-	mov r6, 0  ; 
+	mov r6, 0  ; calculated index
 	mov r7, 4  ; mul opperand/index width
 
 .sort:
