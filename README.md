@@ -1,1 +1,4 @@
-# rpi3 arm assembly is compiled using FASMARM
+- rpi3 arm assembly is compiled using FASMARM
+- sd card needs to be formatted in fat32
+- kernal.img is the main binary, start.elf and bootcode.bin are both required to execute the code but do not need updating
+- make sure to use pin 18 to flash the led
