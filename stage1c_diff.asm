@@ -20,8 +20,8 @@ stage1c_diff:
 	cmp r0, r1
 	bgt .if_gt
 	blt .if_lt
-	sub r0, r1, r0 ;assumes the only option after lt and gt is eq so subtracts contents
-	b .return
+	mov r0, #0 ; assumes if not lt or gt then eq and loads r0 then exits
+	b .return 
 
 .if_lt:
 	sub r0, r1, r0

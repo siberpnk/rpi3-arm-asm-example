@@ -14,8 +14,8 @@ INIT:
         ; initialises input values for Stages 1A, 1B and 1C
         ; you can change the values but not the registers
         mov r5, 3   ; arg 1 for Stage 1
-        mov r6, 3   ; arg 2 for Stage 1
-        mov r7, 3   ; arg 3 for Stage 1
+        mov r6, 2   ; arg 2 for Stage 1
+        mov r7, 2   ; arg 3 for Stage 1
 
 
         ; initialises arrays for Stages 2, 3, 4 and 5

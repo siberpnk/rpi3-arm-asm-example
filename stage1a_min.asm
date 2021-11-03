@@ -16,12 +16,15 @@ stage1a_min:
 	mov r0, r1
 	mov r1, r2
 	cmp r0, r1
+	bgt .if_gt
 	ble .return
-	b stage1a_min
+	;b stage1a_min
 
 .if_lt_OR_eq:
 	cmp r0, r2
-	ble stage1a_min	
+	movge r0, r2
+	b .return
+	;ble stage1a_min	
 
 .return:
         bx lr

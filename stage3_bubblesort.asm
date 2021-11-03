@@ -6,7 +6,6 @@
 ; r2 - BASE address of peripherals
 
 stage3_bubblesort:
-        ; your function must mov the address of the sorted array to r0
 	push {lr}
 	push {r1, r2, r3, r4, r5, r6, r7, r8}
 
