@@ -1,1 +1,1 @@
-# rpi3-arm-asm-led-example
+# rpi3 arm assembly is compiled using FASMARM
